@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sonar_salud.startSession.StartSessionControllerSliders">
+   <children>
+      <BorderPane layoutX="150.0" layoutY="148.0" prefHeight="65.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #015679;">
+               <children>
+                  <Pane layoutX="124.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <FontAwesomeIconView fx:id="btn_exit" fill="WHITE" glyphName="CLOSE" layoutX="770.0" layoutY="17.0" onMouseClicked="#close_app" size="17">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                        <ImageView fitHeight="18.0" fitWidth="14.0" layoutX="31.0" layoutY="4.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../../../image/PineTools.com_Logo%20(3)_05.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="54.0" layoutY="-2.0" prefHeight="33.0" prefWidth="164.0" stylesheets="@../styleMainUI.css" text="Sonar Salud" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="655.0" style="-fx-background-color: #015679;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <Label fx:id="label_tittle_panel" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="btn_menu" layoutX="30.0" layoutY="31.0" textFill="#808080">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BARS" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="btn_menu_back" layoutX="30.0" layoutY="30.0" text="MENU" textFill="#fffdfd">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BARS" />
+                     </graphic>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <StackPane fx:id="menuOptionsSlider" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <AnchorPane fx:id="pnl_analysis_anchor" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#backOpcion" prefHeight="556.0" prefWidth="889.0" style="-fx-background-color: #FFF;">
+                     <children>
+                        <AnchorPane layoutX="519.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="501.0" prefWidth="240.0" stylesheets="@../styleMainUI.css" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="495.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="325.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="DIAGNOSTIC" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <PieChart fx:id="pieChartDiagnosis" />
+                                    <Button fx:id="btn_Restart_Diagnostic" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onMouseClicked="#restartDiagnosis" prefHeight="40.0" prefWidth="155.0" text="Restart Diagnosis" textFill="WHITE" visible="false" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="530.0" stylesheets="@../styleMainUI.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="10.0">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                           <children>
+                              <Label alignment="CENTER" layoutX="93.0" layoutY="6.0" prefHeight="40.0" prefWidth="325.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="QUESTIONS" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="message_Text" contentDisplay="CENTER" layoutX="236.0" layoutY="142.0" text="Cuidar nuestra salud mental promueve un equilibrio emocional que nos permite enfrentar los desafíos de la vida de manera más efectiva." textAlignment="CENTER" textFill="#015679" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="40.0" right="40.0" />
+                                 </padding>
+                              </Label>
+                              <Text fx:id="numQuestion_Text" fill="#8d8d8d" layoutX="14.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1/20">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="30.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="170.0" prefWidth="530.0" stylesheets="@../styleMainUI.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="270.0">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                           <children>
+                              <HBox alignment="CENTER" layoutX="118.0" layoutY="24.0" prefHeight="170.0" prefWidth="500.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <Text fx:id="timerText" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="recordButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#toggleRecording" prefHeight="40.0" prefWidth="70.0" stylesheets="@../styleMainUI.css" text="Start" textFill="WHITE" />
+                                    <Button fx:id="sendButton" disable="true" mnemonicParsing="false" onAction="#sendAudio" prefHeight="40.0" prefWidth="70.0" text="Send" textFill="WHITE" />
+                                    <Button fx:id="btn_Start_Analysis" defaultButton="true" disable="true" mnemonicParsing="false" onMouseClicked="#startDiagnosis" prefHeight="40.0" prefWidth="70.0" text="Analysis" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnl_category" onMouseClicked="#backOpcion" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF;">
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                     <children>
+                        <VBox prefHeight="536.0" prefWidth="725.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="80.0" style="-fx-background-color: #FFF;">
+                                 <children>
+                                    <AnchorPane fx:id="option_Depresion" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#menuOptions" prefHeight="191.0" prefWidth="187.0" stylesheets="@../styleMainUI.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="495.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="40.0" prefWidth="325.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="DEPRESIÓN" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="150.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/cambios-de-humor.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="option_Ansiedad" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#menuOptions" prefHeight="191.0" prefWidth="187.0" stylesheets="@../styleMainUI.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="495.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="40.0" prefWidth="325.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="ANSIEDAD" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="150.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/ansiedad.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="80.0" style="-fx-background-color: #FFF;">
+                                 <children>
+                                    <AnchorPane fx:id="option_Esquizofrenia" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#menuOptions" prefHeight="191.0" prefWidth="187.0" stylesheets="@../styleMainUI.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="495.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="40.0" prefWidth="193.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="ESQUIZOFRENIA" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="150.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/escuchando.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="option_Bulimia" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#menuOptions" prefHeight="191.0" prefWidth="187.0" stylesheets="@../styleMainUI.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="495.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="40.0" prefWidth="325.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="BULIMIA" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="150.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/bulimia.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnl_setting" onMouseClicked="#backOpcion" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF;">
+                     <children>
+                        <AnchorPane fx:id="btn_exit" layoutX="350.0" layoutY="218.0" onMouseClicked="#backToLogin" prefHeight="100.0" prefWidth="100.0" stylesheets="@../styleMainUI.css">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" stylesheets="@../styleMainUI.css">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/cerrar-sesions.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="74.0" text="Exit">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnl_editProfile" layoutX="10.0" layoutY="10.0" onMouseClicked="#backOpcion" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="162.0" layoutY="32.0" prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/user.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="318.0" prefWidth="760.0" stylesheets="@../styleMainUI.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="305.0" prefWidth="760.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label alignment="TOP_LEFT" prefHeight="36.0" prefWidth="188.0" text="Profile Settings" textFill="#015679" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="235.0" prefWidth="700.0" spacing="15.0">
+                                             <children>
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="235.0" prefWidth="336.0" spacing="5.0">
+                                                   <children>
+                                                      <HBox prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="106.0" text="*Name: " textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_name" alignment="BOTTOM_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text="*Username:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_username" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="35.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text=" Nick:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_nick" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="60.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text="*Birth Date:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_age" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="85.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text=" Nationality:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_nationality" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="110.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text=" CP:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_cp" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="235.0" prefWidth="336.0" spacing="5.0">
+                                                   <children>
+                                                      <HBox prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="106.0" text=" Profession:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_profession" alignment="BOTTOM_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text=" Civil Status:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_status" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="35.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text=" Gender:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_gender" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="60.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text="*Phone:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_phone" alignment="TOP_CENTER" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="85.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text=" Email:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXTextField fx:id="textField_email" alignment="TOP_CENTER" disable="true" focusColor="#99d9ea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="230.0" promptText="-" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="110.0" prefHeight="40.0" prefWidth="336.0">
+                                                         <children>
+                                                            <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="110.0" text="*Password:" textFill="#015679">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXPasswordField fx:id="textField_password" alignment="TOP_CENTER" focusColor="#99d9ea" prefHeight="30.0" prefWidth="230.0" unFocusColor="#99d9ea">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXPasswordField>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="30.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton fx:id="btn_SaveChanges" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#updateUser" prefHeight="40.0" prefWidth="251.0" ripplerFill="#0927eb" styleClass="loginBtn" stylesheets="@../styleMainUI.css" text="Save Changes">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="pnl_profile" onMouseClicked="#backOpcion" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="162.0" layoutY="32.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/user.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="760.0" stylesheets="@../styleMainUI.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="156.0" prefWidth="760.0" spacing="20.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label alignment="TOP_LEFT" prefHeight="36.0" prefWidth="188.0" text="Profile Settings" textFill="#015679" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="380.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="100.0" prefWidth="150.0">
+                                                               <children>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="111.0" text="Name: " textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="102.0" text="Username:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="140.0" text="Age:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="190.0">
+                                                               <children>
+                                                                  <Label fx:id="label_profile_name" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="204.0" text="Sofía" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="label_profile_username" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="217.0" text="Pérez" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="label_profile_age" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="231.0" text="20" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="380.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="100.0" prefWidth="150.0">
+                                                               <children>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="155.0" text="Gender:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="174.0" text="Phone: " textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="165.0" text="Email:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="190.0">
+                                                               <children>
+                                                                  <Label fx:id="label_profile_gender" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="210.0" text="Famale" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="label_profile_phone" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="185.0" text="658 466-999" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="label_profile_email" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="193.0" text="sofia.perez@hotmail.es" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="30.0" right="30.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="760.0" stylesheets="@../styleMainUI.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" layoutX="38.0" layoutY="47.0" prefHeight="156.0" prefWidth="760.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label alignment="BOTTOM_LEFT" prefHeight="48.0" prefWidth="173.0" text="Diagnosis Info" textFill="#015679" underline="true">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="158.0" prefWidth="700.0">
+                                             <children>
+                                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="380.0">
+                                                   <children>
+                                                      <HBox prefHeight="155.0" prefWidth="350.0">
+                                                         <children>
+                                                            <VBox prefHeight="100.0" prefWidth="150.0">
+                                                               <children>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="111.0" text="Symptoms:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="140.0" text="Diseases:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="102.0" text="Diagnostic:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="137.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <Label fx:id="label_Name111" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="204.0" text="Cansancio" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="label_UserName111" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="217.0" text="Dolor de Espalda" textFill="#015679">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label fx:id="label_Birdth111" alignment="TOP_LEFT" prefHeight="30.0" prefWidth="231.0" text="Depresión" textFill="#d71212">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="380.0">
+                                                   <children>
+                                                      <HBox prefHeight="144.0" prefWidth="350.0">
+                                                         <children>
+                                                            <VBox prefHeight="84.0" prefWidth="104.0">
+                                                               <children>
+                                                                  <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="104.0" text="Treatment:" textFill="#015679">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="84.0" prefWidth="245.0">
+                                                               <children>
+                                                                  <Label fx:id="label_Name1111" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="151.0" prefWidth="245.0" text="Ajustar hábitos de sueño, alimentación y reducir el consumo de sustancias como el alcohol y la cafeína. Actividad física regular, como caminar, correr o practicar deportes." textAlignment="JUSTIFY" textFill="#015679" wrapText="true">
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="30.0" right="30.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+      <AnchorPane fx:id="slider" layoutY="63.0" prefHeight="535.0" prefWidth="250.0" style="-fx-background-color: #FFF;" stylesheets="@../styleMainUI.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" spacing="15.0" styleClass="primaryColor">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="78.0" pickOnBounds="true" smooth="false" styleClass="primaryColor">
+                           <image>
+                              <Image url="@../../../image/user.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="label_slide_name" prefHeight="30.0" prefWidth="115.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css" text="Juan Cortéz" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonEdit" mnemonicParsing="false" onMouseClicked="#menuOptions" opacity="0.6" styleClass="buttonEdit" stylesheets="@../styleMainUI.css" text="Edit Profile" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Separator prefHeight="2.0" prefWidth="200.0" style="-fx-background-color: #FFF;" />
+                  <VBox alignment="TOP_CENTER" prefHeight="330.0" prefWidth="250.0" stylesheets="@../styleMainUI.css">
+                     <children>
+                        <Button fx:id="btn_profile" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="82.5" prefWidth="250.0" text="Profile" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_analysis" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="82.5" prefWidth="250.0" text="Analysis" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBE" size="20" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_categories" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="82.5" prefWidth="250.0" text="Categories" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILTER" size="20" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_settings" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="82.5" prefWidth="250.0" text="Settings" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="GEAR" size="20" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

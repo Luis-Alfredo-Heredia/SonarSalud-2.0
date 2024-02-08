@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sonar_salud.splash.SplashController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="458.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../image/splash.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="207.0" prefHeight="67.0" prefWidth="440.0" text="¡Atención! Más del 75% de los problemas de salud mental comienzan antes de los 24 años. Invertir en la salud mental juvenil es construir un futuro más fuerte." textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="16.0" layoutY="14.0" prefHeight="19.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="labelLoadin" layoutX="5.0" layoutY="220.0" text="Loading..." textFill="#b9aeae" />
+   </children>
+</AnchorPane>
