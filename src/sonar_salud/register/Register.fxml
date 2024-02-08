@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="parent" stylesheets="@../styleMainUI.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sonar_salud.register.RegistrationController">
+   <children>
+      <ImageView fitHeight="130.0" fitWidth="100.0" layoutX="150.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/image.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="147.0" text="Registration Form">
+         <font>
+            <Font name="Impact" size="28.0" />
+         </font>
+      </Label>
+          <FontAwesomeIconView glyphName="CLOSE" layoutX="371.0" layoutY="28.0" onMouseClicked="#close_app" size="1.5em" styleClass="closeBtn" />
+      <Label layoutX="105.0" layoutY="190.0" text="Fill the form for registration" textFill="#727171">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="register_username" focusColor="#99d9ea" labelFloat="true" layoutX="50.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Username" unFocusColor="#99d9ea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="register_pass" focusColor="#99d9ea" labelFloat="true" layoutX="50.0" layoutY="390.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Password" unFocusColor="#99d9ea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="register_email" focusColor="#99d9ea" labelFloat="true" layoutX="50.0" layoutY="290.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Email" unFocusColor="#99d9ea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="register_passConfirm" focusColor="#99d9ea" labelFloat="true" layoutX="50.0" layoutY="440.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="Confirm Password" unFocusColor="#99d9ea">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btn_register" buttonType="RAISED" layoutX="50.0" layoutY="510.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#registerNewUser" prefHeight="50.0" prefWidth="300.0" ripplerFill="#0927eb" styleClass="loginBtn" stylesheets="@../styleMainUI.css" text="Register">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+        <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="21.0" layoutY="28.0" onMouseClicked="#back_to_main" size="1.5em" styleClass="backBtn" />
+      <DatePicker fx:id="register_birthDate" layoutX="48.0" layoutY="340.0" prefHeight="30.0" prefWidth="300.0" promptText="BirthDate" style="-fx-background-color: #99d9ea; -fx-border-color: #99d9ea;" stylesheets="@../styleMainUI.css" />
+   </children>
+</AnchorPane>

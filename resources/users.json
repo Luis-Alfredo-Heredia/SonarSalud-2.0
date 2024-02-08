@@ -1,0 +1,86 @@
+[
+  {
+    "id": 7,
+    "name": "Carlos",
+    "lastName": "Guerrero",
+    "age": "43",
+    "birthDate": "2000-11-03",
+    "gender": "Masculino",
+    "nick": "Carlos-klk",
+    "phone": "665-555-555",
+    "email": "admin",
+    "password": "admin"
+  },
+  {
+    "id": 1.0,
+    "name": "SDFGS",
+    "lastName": "SDFGSDF",
+    "birthDate": "2000-11-03",
+    "gender": "Femenino",
+    "nick": "SDFG",
+    "password": "SDFG"
+  },
+  {
+    "id": 2.0,
+    "name": "ASDF",
+    "lastName": "ASDF",
+    "birthDate": "2000-11-03",
+    "gender": "Femenino",
+    "nick": "SDFG",
+    "password": "SDFG"
+  },
+  {
+    "id": 3.0,
+    "name": "ASDF",
+    "lastName": "ASDF",
+    "birthDate": "2000-11-03",
+    "gender": "Femenino",
+    "nick": "SDFGD",
+    "password": "SDFG"
+  },
+  {
+    "id": 4.0,
+    "name": "ASDF",
+    "lastName": "ASDF",
+    "birthDate": "2000-11-03",
+    "gender": "Femenino",
+    "nick": "SDFGD",
+    "password": "SDFG"
+  },
+  {
+    "id": 5.0,
+    "name": "ASDF",
+    "lastName": "ASDF",
+    "birthDate": "2000-11-03",
+    "gender": "Femenino",
+    "nick": "SDFGD",
+    "password": "SDFG"
+  },
+  {
+    "id": 6.0,
+    "name": "ASDF",
+    "lastName": "ASDF",
+    "birthDate": "2000-11-03",
+    "gender": "Femenino",
+    "nick": "SDFGD",
+    "password": "SDFG"
+  },
+  {
+    "id": 7.0,
+    "name": "asdf",
+    "lastName": "asda",
+    "birthDate": "2000-11-10",
+    "gender": "Masculino",
+    "nick": "cleanForm",
+    "password": "cleanForm"
+  },
+  {
+    "id": 8.0,
+    "name": "asdf2345",
+    "lastName": "asdf2345",
+    "birthDate": "2000-11-25",
+    "gender": "Masculino",
+    "nick": "2345",
+    "password": "2345"
+  }
+]

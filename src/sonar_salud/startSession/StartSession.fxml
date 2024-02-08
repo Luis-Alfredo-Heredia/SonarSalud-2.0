@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sonar_salud.startSession.StartSessionController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="250.0" styleClass="primaryColor" stylesheets="@../styleMainUI.css">
+         <children>
+            <Pane prefHeight="150.0" prefWidth="250.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="21.0" layoutY="31.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../../image/Logo%20(3)_05.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="77.0" layoutY="49.0" text="Sonar Salud" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btn_profile" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="50.0" prefWidth="250.0" text="Profile" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_categories" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="50.0" prefWidth="250.0" text="Categories" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILTER" size="20" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_analysis" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="50.0" prefWidth="250.0" text="Analysis" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CUBE" size="20" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_settings" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#menuOptions" prefHeight="50.0" prefWidth="250.0" text="Settings" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="GEAR" size="20" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <FontAwesomeIconView fx:id="btn_exit" glyphName="CLOSE" layoutX="779.0" layoutY="20.0" onMouseClicked="#close_app" size="1.5em" styleClass="closeBtn" />
+      <Pane fx:id="pnl_status" layoutX="250.0" layoutY="30.0" prefHeight="100.0" prefWidth="550.0" style="-fx-background-color: #015679;">
+         <children>
+            <Label fx:id="label_tittle_panel" layoutX="41.0" layoutY="32.0" text="Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <StackPane layoutX="250.0" layoutY="129.0" prefHeight="470.0" prefWidth="550.0">
+         <children>
+            <GridPane fx:id="pnl_analysis" style="-fx-background-color: #FFF;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="579.0" text="Analysis" textFill="#e4c82b">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_setting" alignment="CENTER" style="-fx-background-color: #FFF;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="551.0" text="Settings" textFill="#365dfc">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_category" style="-fx-background-color: #FFF;" StackPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="552.0" text="Category" textFill="#69b565">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane fx:id="pnl_profile" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: #FFF;" StackPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="551.0" text="Profile" textFill="#e80f0f">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
