@@ -1,0 +1,100 @@
+.parent{
+	-fx-background-color: white;
+}
+.sidebar{
+	-fx-background-color:  #99d9ea;
+	
+}
+
+.primaryColor{
+	-fx-background-color:  #99d9ea;
+}
+
+.forgetBtn{
+	-fx-text-fill: #a3a3a3;
+}
+
+.forgetBtn:hover{
+	-fx-text-fill: #99d9ea;
+	-fx-underline: true;
+	
+}
+.loginBtn{
+	-fx-background-color:#99d9ea;
+	-fx-text-fill: #FFF;
+	-fx-background-radius: 10px;
+	
+}
+.loginBtn:hover{
+	-fx-background-color: transparent;
+	-fx-text-fill: #99d9ea;
+	-fx-border-color:#99d9ea;
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-background-radius: 10px;
+	-fx-border-radius: 10px;
+	
+}
+.closeBtn{
+	-fx-fill: #545454;
+}
+.closeBtn:hover{
+	-fx-fill: #ff6666;
+}
+
+.backBtn{
+	-fx-fill: #545454;
+	
+}
+
+.backBtn:hover{
+	-fx-fill: #99d9ea;
+	
+}
+
+.button{
+	-fx-background-color:  #99d9ea;
+	
+}
+
+.button:hover{
+	-fx-background-color:   #015679;
+	
+}
+.button:pressed{
+	-fx-background-color:  #8bffeb;
+	
+}
+.button:focused{
+	-fx-background-color:  #015679;
+	-fx-border-color : #CDD1D6;
+	-fx-border-width : 0px 0px 0px 3px;
+}
+
+.buttonEdit{
+	-fx-background-color:   #015679;
+	-fx-background-radius: 200px;
+	
+}
+
+.jfx-text-field, .jfx-password-field {
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill:#015679;
+    -jfx-focus-color: #99d9ea;
+    -jfx-unfocus-color: #99d9ea;
+}
+
+.date-picker .text-field {
+    -fx-control-inner-background: #FFF ;
+}
+
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 6,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+}
+

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "reflexion": "La salud mental afecta todos los aspectos de nuestra vida, incluyendo nuestras relaciones, trabajo y bienestar general.",
+    "pregunta": "¿Cómo te sientes emocionalmente en general?"
+  },
+  {
+    "id": "2",
+    "reflexion": "Cuidar nuestra salud mental promueve un equilibrio emocional que nos permite enfrentar los desafíos de la vida de manera más efectiva.",
+    "pregunta": "¿Has experimentado cambios significativos en tu estado de ánimo últimamente?"
+  },
+  {
+    "id": "3",
+    "reflexion": "Una buena salud mental contribuye a una mayor resiliencia frente al estrés y las adversidades.",
+    "pregunta": "¿Te resulta difícil concentrarte en las tareas diarias?"
+  },
+  {
+    "id": "4",
+    "reflexion": "El autocuidado mental mejora la calidad del sueño, lo que es esencial para el funcionamiento diario y el bienestar general.",
+    "pregunta": "¿Cómo duermes por la noche? ¿Experimentas problemas de sueño?"
+  },
+  {
+    "id": "5",
+    "reflexion": "Mantener una buena salud mental ayuda a prevenir el agotamiento y el cansancio emocional.",
+    "pregunta": "¿Tienes cambios en tu apetito, ya sea aumento o disminución?"
+  },
+  {
+    "id": "6",
+    "reflexion": "La salud mental positiva influye en la toma de decisiones más informada y reflexiva.",
+    "pregunta": "¿Has experimentado pérdida de interés en actividades que solías disfrutar?"
+  },
+  {
+    "id": "7",
+    "reflexion": "Un estado mental saludable facilita la construcción y mantenimiento de relaciones interpersonales positivas.",
+    "pregunta": "¿Te sientes constantemente fatigado o sin energía?"
+  },
+  {
+    "id": "8",
+    "reflexion": "La atención a la salud mental reduce el riesgo de desarrollar problemas de salud física relacionados con el estrés crónico.",
+    "pregunta": "¿Has tenido pensamientos negativos sobre ti mismo/a o sobre la vida en general?"
+  },
+  {
+    "id": "9",
+    "reflexion": "Cuidar nuestra salud mental fomenta una autoimagen positiva y una mayor autoestima.",
+    "pregunta": "¿Has notado cambios en tu nivel de ansiedad en situaciones cotidianas?"
+  },
+  {
+    "id": 10,
+    "reflexion": "Una mente sana contribuye al desarrollo de habilidades de afrontamiento efectivas.",
+    "pregunta": "¿Cómo manejas el estrés en tu vida?"
+  },
+  {
+    "id": 11,
+    "reflexion": "La salud mental positiva está vinculada a un mejor rendimiento académico y laboral.",
+    "pregunta": "¿Tienes dificultades para relacionarte con los demás o mantener relaciones sociales?"
+  },
+  {
+    "id": 12,
+    "reflexion": "El autocuidado mental fomenta la creatividad y la resolución de problemas.",
+    "pregunta": "¿Has tenido experiencias traumáticas en el pasado que puedan afectar tu bienestar actual?"
+  },
+  {
+    "id": 13,
+    "reflexion": "La atención a la salud mental mejora la capacidad de adaptación a situaciones cambiantes.",
+    "pregunta": "¿Experimentas miedo o preocupaciones irracionales?"
+  },
+  {
+    "id": 14,
+    "reflexion": "La salud mental positiva influye en la motivación y la perseverancia ante desafíos.",
+    "pregunta": "¿Has tenido cambios en tu rendimiento académico o laboral?"
+  },
+  {
+    "id": 15,
+    "reflexion": "Mantener un estado mental saludable contribuye a la estabilidad emocional en las relaciones familiares.",
+    "pregunta": "¿Cómo te sientes acerca de tu autoestima?"
+  },
+  {
+    "id": 16,
+    "reflexion": "El bienestar mental influye en la satisfacción general con la vida.",
+    "pregunta": "¿Has tenido cambios en tu patrón de consumo de alcohol, drogas o medicamentos?"
+  },
+  {
+    "id": 17,
+    "reflexion": "La salud mental positiva promueve una mayor autoconciencia y comprensión de uno mismo.",
+    "pregunta": "¿Has tenido dificultades para controlar tus impulsos o comportamientos?"
+  },
+  {
+    "id": 18,
+    "reflexion": "Cuidar nuestra salud mental reduce la probabilidad de desarrollar trastornos mentales graves.",
+    "pregunta": "¿Cómo te llevas con tu familia y amigos en este momento?"
+  },
+  {
+    "id": 19,
+    "reflexion": "La atención a la salud mental es esencial para alcanzar metas y objetivos personales.",
+    "pregunta": "¿Tienes dificultades para enfrentar y resolver problemas cotidianos?"
+  },
+  {
+    "id": 20,
+    "reflexion": "Fomentar la salud mental contribuye a una sociedad más comprensiva y solidaria.",
+    "pregunta": "¿Has tenido pensamientos o sentimientos suicidas?"
+  }
+]
